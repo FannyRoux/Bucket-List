@@ -1,6 +1,6 @@
 body {
     /*margin: 0;
-    /*padding: 0;*/
+    padding: 0;*/
     font-family: 'Shadows Into Light', cursive;
 }
 
@@ -127,6 +127,29 @@ input, textarea, select {
 
 .aList {
     color: black;
+}
+
+.aBody{
+    display: flex;
+    width:100%;
+    color:black;
+    font-size: xx-large;
+    justify-content: center;
+}
+
+.aBody:hover{
+    display: flex;
+    color:red;
+    font-size: xx-large;
+    justify-content: center;
+}
+
+.bodyMain{
+    width : 90%;
+    padding : 90px 0 10px 60px;
+    font-size: xxx-large;
+    text-align: center;
+    vertical-align: center;
 }
 
 #bucket {

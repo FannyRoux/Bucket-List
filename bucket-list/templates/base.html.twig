@@ -34,10 +34,17 @@
     {% endblock %}
 </header>
 
+<main>
 {% block main %}
 {% endblock %}
+</main>
 
-{% block footer %}
-{% endblock %}
+<footer class="footer">
+    {% block footer %}
+        <div>
+            - &copy Bucket-List 2024 -
+        </div>
+    {% endblock %}
+</footer>
 </body>
 </html>
