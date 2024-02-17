@@ -13,4 +13,15 @@ class MainController extends AbstractController
     {
         return $this->render('main/home.html.twig');
     }
+
+    #[Route('/aboutUs', name:'main_aboutUs')]
+    public function aboutUs():Response
+    {
+        $creatorsInfo= json_decode(file_get_contents($this->getParameter('app.data') . 'team.json'),true);
+
+
+        return $this->render('main/aboutUs.html.twig',[
+            'creators'=>$creatorsInfo
+        ]);
+    }
 }

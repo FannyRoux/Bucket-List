@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+
+{% block main %}
+    <h1 class="aboutUs">- About Us - </h1>
+    <div class="mainAboutUs">
+        {% for creator in creators %}
+            <div class="creator">
+                <img src="{{ creator.picture }}" alt="creator's picture">
+                <div>
+                    {{ ('fabien' in creator.firstname)? '&hearts;' : '' }}
+                    {{ creator.firstname | capitalize}}
+                    {{ creator.lastname | upper }},
+                    {{ creator.dateOfBirth | date('m/d/Y') }}
+                </div>
+                <div>
+                    creator of : {{ creator.creatorOf }}
+                </div>
+                <div>
+                    {{ creator.description }}
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {{ parent() }}
+{% endblock %}
+
