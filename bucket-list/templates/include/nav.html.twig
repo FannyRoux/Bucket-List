@@ -3,8 +3,21 @@
         <li class="crumb"><a href="{{ path('main_home') }}">Home</a></li>
         <li class="crumb"><a href="{{ path('wish_list') }}">All wishes</a></li>
         <li class="crumb"><a href="{{ path('main_aboutUs') }}">About us</a></li>
-        <li class="crumb"><a href="{{ path('wish_new') }}">Add a wish</a></li>
-        <li class="crumb"><a href="#">Create account</a></li>
+        {% if app.user %}
+            <li class="crumb"><a href="{{ path('wish_new') }}">Add a wish</a></li>
+        {% endif %}
+    </ol>
+</nav>
+
+<nav class="crumbs2">
+    <ol>
+        {% if app.user %}
+            <li class="welcome"> Welcome {{ app.user.username }} !</li>
+            <li class="crumb"><a href="{{ path('app_logout') }}">Logout</a></li>
+        {% else %}
+            <li class="crumb"><a href="{{ path('app_register') }}">Register</a></li>
+            <li class="crumb"><a href="{{ path('app_login') }}">Login</a></li>
+        {% endif %}
 
     </ol>
 </nav>

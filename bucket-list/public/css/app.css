@@ -23,7 +23,7 @@ a {
 li {
     font-size: medium;
     color: red;
-    list-style-type:none;
+    list-style-type: none;
     padding-bottom: 10px;
 }
 
@@ -55,7 +55,7 @@ input, textarea, select {
 }
 
 .header {
-    width:100%;
+    width: 100%;
     color: white;
     background: linear-gradient(130deg, #000000, #132135);;
 }
@@ -99,7 +99,7 @@ input, textarea, select {
     font-size: xxx-large;
 }
 
-.whislist{
+.whislist {
     width: 80%;
     margin: 50px;
     font-size: x-large;
@@ -107,7 +107,7 @@ input, textarea, select {
     overflow-y: scroll;
 }
 
-.details{
+.details {
     width: 80%;
     margin: 50px;
     font-size: x-large;
@@ -130,6 +130,21 @@ input, textarea, select {
 .crumbs ol {
     list-style-type: none;
     padding-left: 0;
+}
+
+.crumbs2 ol {
+    list-style-type: none;
+    position: fixed;
+    top: 10px;
+    right:10px;
+}
+
+.crumbs2 li{
+    display: inline-block;
+    text-decoration: none;
+    color: deepskyblue;
+    padding-right: 20px;
+    font-size: x-large;
 
 }
 
@@ -137,28 +152,43 @@ input, textarea, select {
     color: black;
 }
 
-.aBody{
+.aBody {
     display: flex;
-    color:black;
+    color: black;
     font-size: xx-large;
     justify-content: center;
 }
 
-.aBody:hover{
+.aBody:hover {
     display: flex;
-    color:red;
+    color: red;
     font-size: xx-large;
     justify-content: center;
 }
 
-.bodyMain{
-    width : 100%;
-    padding : 30px 0 70px 0;
+.bodyMain {
+    width: 100%;
+    padding: 30px 0 70px 0;
     font-size: xxx-large;
     text-align: center;
     vertical-align: center;
 }
 
-#bucket {
-    height: 80px;
+.rememberMe {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
 }
+
+.remember{
+    padding-right: 10px;
+}
+
+.loginButton{
+    display:flex;
+    justify-content: center;
+}
+
+    #bucket {
+        height: 80px;
+    }

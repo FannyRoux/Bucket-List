@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use App\Entity\Wish;
 use App\Form\WishType;
 use App\Repository\WishRepository;
@@ -38,6 +39,8 @@ class WishController extends AbstractController
         $newWish = new Wish();
         $newWish->setDateCreated(new DateTime());
         $newWish->setIsPublished(true);
+        $currentUser = $this->getUser()->getUserIdentifier();
+        $newWish->setAuthor($currentUser);
         $newWishForm = $this->createForm(WishType::class,$newWish);
 
         $newWishForm->handleRequest($request);
