@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+{% block main %}
+    <h1 class="aboutUs"> {{ wish.title }}</h1>
+    <div class="details">
+        <p>Created by {{ wish.author }}
+        <p>on {{ wish.dateCreated | date('d/m/Y') }}</p>
+{#        <p>in category {{ wish.category.name }}</p>#}
+        <p>"{{ wish.description }}"</p>
+    </div>
+{% endblock %}
+{% block footer %}
+    {{ parent() }}
+{% endblock %}

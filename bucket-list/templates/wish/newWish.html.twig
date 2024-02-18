@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+    {{ parent() }}
+{% endblock %}
+
+{% block main %}
+    <h1 class="aboutUs"> - Add your own wish ! -</h1>
+    {{ form_start(newWishForm) }}
+    {{ form_widget(newWishForm) }}
+    <button>Add a Wish !</button>
+    {{ form_end(newWishForm) }}
+{% endblock %}
+
+{% block footer %}
+    {{ parent() }}
+{% endblock %}
+
