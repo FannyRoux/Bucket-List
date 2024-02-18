@@ -24,6 +24,7 @@ li {
     font-size: medium;
     color: red;
     list-style-type:none;
+    padding-bottom: 10px;
 }
 
 form {

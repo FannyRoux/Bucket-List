@@ -10,7 +10,7 @@
                 {% for wish in wishes %}
                     <li class="wishLi">
                         <a class="aList"href="{{ path('wish_details',{'id':wish.id}) }}">
-                            {{ wish.title }}
+                            {{ wish.title }} [{{ wish.category.name }}]
                         </a>
                     </li>
                 {% endfor %}
